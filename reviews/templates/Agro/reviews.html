@@ -1,0 +1,11 @@
+{% extends "Agro/base.html" %}
+{% block content%}
+	{% for review in reviews %}
+		<h1>{{ review.title }}</h1>
+		<p>Rating: {{ review.stars }}</p>
+		<p>{{ review.body }}</p>
+		<p>By: {{ review.name }}</p>
+	{% endfor %}
+{% endblock content %}
+
+
