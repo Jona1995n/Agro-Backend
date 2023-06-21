@@ -1,10 +1,16 @@
 {% extends "Agro/base.html" %}
 {% block content%}
 	{% for review in reviews %}
-		<h1>{{ review.title }}</h1>
-		<p>Rating: {{ review.stars }}</p>
-		<p>{{ review.body }}</p>
-		<p>By: {{ review.name }}</p>
+		<article class="media content-section">
+		  <div class="media-body">
+		    <div class="article-metadata">
+		      <a class="mr-2" href="#">{{ review.name }}</a>
+		      <small class="text-muted">{{ review.time|date:"F d, Y" }}</small>
+		    </div>
+		    <h2><a class="article-title" href="#">{{ review.title }}</a></h2>
+		    <p class="article-content">{{ review.body }}</p>
+		  </div>
+		</article>
 	{% endfor %}
 {% endblock content %}
 
