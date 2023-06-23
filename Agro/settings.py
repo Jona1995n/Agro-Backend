@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-1_0#ukg+6u+x)w86e$uf7n_yzi+y5r6k44p1=3-^#5aqbma3z2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'safe-beyond-38839.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'safe-beyond-38839.herokuapph.com']
 
 # Application definition
 
@@ -85,6 +86,9 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+db_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_env)
 
 REST_FRAMEWORK = {
     'COERCE_DECIMAL_TO_STRING': False,
