@@ -86,8 +86,8 @@ DATABASES = {
     }
 }
 
-# db_env = dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db_env)
+db_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'] = db_env
 
 REST_FRAMEWORK = {
     # 'COERCE_DECIMAL_TO_STRING': False,
