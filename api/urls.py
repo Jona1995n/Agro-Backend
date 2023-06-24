@@ -1,7 +1,7 @@
 from django.urls import path, include
 from . import views
 from rest_framework import routers
-rom rest_framework.authtoken.views import obtain_auth_token 
+from rest_framework.authtoken.views import obtain_auth_token 
 
 router = routers.DefaultRouter()
 router.register(r'facility', views.FacilityViewSet)
