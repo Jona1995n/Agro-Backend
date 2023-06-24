@@ -86,18 +86,18 @@ DATABASES = {
     }
 }
 
-db_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_env)
+# db_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_env)
 
 REST_FRAMEWORK = {
-    'COERCE_DECIMAL_TO_STRING': False,
+    # 'COERCE_DECIMAL_TO_STRING': False,
     # 'DEFAULT_AUTHENTICATION_CLASSES': (
     #     'rest_framework.authentication.TokenAuthentication',
     #     'rest_framework.authentication.SessionAuthentication',
     # ),
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ],
+    ]
 }
 
 # Password validation
