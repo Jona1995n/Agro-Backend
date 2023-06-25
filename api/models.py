@@ -9,3 +9,12 @@ class Facility(models.Model):
 
     def __str__(self):
         return self.name
+
+class Review(models.Model):
+	title = models.CharField(max_length=30)
+	body = models.TextField()
+	time = models.DateTimeField(default=timezone.now)
+	time = models.ForeignKey(User, on_delete=models.CASCADE)
+
+	def __str__(self):
+		return self.title
