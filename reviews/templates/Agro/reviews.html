@@ -3,12 +3,7 @@
 	{% for review in reviews %}
 		<article class="media content-section">
 		  <div class="media-body">
-		    <div class="article-metadata">
-		      <a class="mr-2" href="#">{{ review.name }}</a>
-		      <small class="text-muted">{{ review.time|date:"F d, Y" }}</small>
-		    </div>
-		    <h2><a class="article-title" href="#">{{ review.title }}</a></h2>
-		    <p class="article-content">{{ review.body }}</p>
+		    <p class="article-content">{{ review.reviewBody }}</p>
 		  </div>
 		</article>
 	{% endfor %}
