@@ -99,7 +99,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
-    'DATETIME_FORMAT': '%s'
+    'DATETIME_FORMAT': '%s000'
 }
 
 # Password validation
