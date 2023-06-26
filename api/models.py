@@ -17,7 +17,7 @@ class Review(models.Model):
     body = models.TextField()
     time = models.DateTimeField(default=timezone.now)
     stars = models.IntegerField()
-    email = models.TextField(default='')
+    email = models.CharField(max_length=50)
     user = models.CharField(max_length=50)
 
     def __str__(self):
