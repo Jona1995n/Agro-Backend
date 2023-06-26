@@ -11,4 +11,4 @@ class FacilityViewSet(viewsets.ModelViewSet):
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-    permissions = [permissions.IsAuthenticated]
+    # permissions = [permissions.IsAuthenticated]
