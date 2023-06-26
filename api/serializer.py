@@ -1,4 +1,4 @@
-from .models import Facility, Review
+from .models import Facility
 from rest_framework import serializers
 
 class FacilitySerializer(serializers.ModelSerializer):
@@ -6,7 +6,7 @@ class FacilitySerializer(serializers.ModelSerializer):
         model = Facility
         fields = ['name', 'category', 'address', 'lat', 'lon']
 
-class ReviewSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Review
-        fields = ['title', 'body', 'time']
+# class ReviewSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Review
+#         fields = ['title', 'body', 'time']
