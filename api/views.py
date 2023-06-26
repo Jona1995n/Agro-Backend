@@ -1,4 +1,4 @@
-from .models import Facility
+from .models import Facility, Review
 from rest_framework import viewsets, permissions
 from .serializer import FacilitySerializer, ReviewSerializer
 
@@ -9,6 +9,6 @@ class FacilityViewSet(viewsets.ModelViewSet):
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
-    queryset = Facility.objects.all()
-    serializer_class = FacilitySerializer
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
     permissions = [permissions.IsAuthenticated]
