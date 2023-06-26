@@ -13,10 +13,10 @@ class Facility(models.Model):
         return self.name
 
 class Review(models.Model):
-	title = models.CharField(max_length=30)
-	body = models.TextField()
-	time = models.DateTimeField(default=timezone.now)
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=30)
+    body = models.TextField()
+    time = models.DateTimeField(default=timezone.now)
+    user = models.CharField(max_length=50, default='user')
 
-	def __str__(self):
-		return self.title
+    def __str__(self):
+	    return self.title
