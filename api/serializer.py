@@ -9,4 +9,4 @@ class FacilitySerializer(serializers.ModelSerializer):
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ['title', 'body', 'time', 'stars', 'email', 'user']
+        fields = ['title', 'body', 'time', 'stars', 'email', 'user', 'facility']
