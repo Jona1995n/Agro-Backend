@@ -19,7 +19,7 @@ class Review(models.Model):
     stars = models.IntegerField()
     email = models.CharField(max_length=50)
     user = models.CharField(max_length=50)
-    # facility = models.ForeignKey(Facility, on_delete=models.CASCADE)
+    facility = models.ForeignKey(Facility, on_delete=models.CASCADE, default='')
 
     def __str__(self):
 	    return self.title   
