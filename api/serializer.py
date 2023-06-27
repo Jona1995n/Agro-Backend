@@ -14,13 +14,12 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class FacilitySerializer(serializers.ModelSerializer):
     reviews = ReviewSerializer(many=True)
-    
+
     class Meta:
         model = Facility
         fields = ['name', 
                   'category', 
                   'address', 
                   'lat', 
-                  'lon',
-                  'reviews'
+                  'lon'
                   ]
