@@ -4,9 +4,9 @@ from .models import Facility, Review
 class FacilitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Facility
-        fields = ['name', 'category', 'address', 'lat', 'lon', 'reviews']
+        fields = ['name', 'category', 'address', 'lat', 'lon']
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
-        fields = ['title', 'body', 'time', 'stars', 'email', 'user', 'facility']
+        fields = ['title', 'body', 'time', 'stars', 'email', 'user']
