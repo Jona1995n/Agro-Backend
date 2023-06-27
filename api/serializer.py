@@ -21,5 +21,6 @@ class FacilitySerializer(serializers.ModelSerializer):
                   'category', 
                   'address', 
                   'lat', 
-                  'lon'
+                  'lon',
+                  'reviews'
                   ]
