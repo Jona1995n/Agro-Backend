@@ -4,7 +4,7 @@ from rest_framework import serializers
 class FacilitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Facility
-        fields = ['name', 'category', 'address', 'lat', 'lon']
+        fields = ['name', 'category', 'address', 'lat', 'lon', 'reviews']
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
