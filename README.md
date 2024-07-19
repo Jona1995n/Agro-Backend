@@ -18,8 +18,7 @@
 | `Accept`          | `application/json`                       |
 | `Authorization`   | `AGRO_AUTH_TOKEN`                        |
 
-
-#### facility item
+#### Facility item
 
 ```
 {
