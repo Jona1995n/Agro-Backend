@@ -3,7 +3,7 @@
 | Method   | URL                                      | Description                              |
 | -------- | ---------------------------------------- | ---------------------------------------- |
 | `GET`    | `/api/facility/`                         | Retrieve all facilities.                 |
-| `GET`    | `/api/review/?facility={facility.id!}`   | Retrieve reviews for facility by id.     |
+| `GET`    | `/api/review/?facility={facility.id}`   | Retrieve reviews for facility by id.     |
 | `GET`    | `/api/facility/{id}`                     | Retrieve specific facility by id.        |
 | `POST`   | `/api/api-token-auth/`                   | Create a new api token.                  |
 | `POST`   | `/api/facility/`                         | Create a new facility.                   |
